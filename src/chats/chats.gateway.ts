@@ -31,10 +31,7 @@ export class ChatsGateway implements OnGatewayInit, OnGatewayConnection, OnGatew
     @MessageBody() username: string,
     @ConnectedSocket() socket: Socket,
   ) {
-    console.log(socket.id);
-    console.log(username);
-    socket.emit("greeting", "hello " + username);
-
-    return "hello world";
+    socket.broadcast.emit("user_connected", username);
+    return username;
   }
 }
