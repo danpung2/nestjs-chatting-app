@@ -3,3 +3,6 @@
 
 ### Description
 - mvc pattern: hbs template engine
+- socket
+- gateway
+- mongoose
